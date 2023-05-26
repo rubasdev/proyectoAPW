@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Boton</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/funtion.js"></script>
+    <link rel="manifest" href="/manifest.json">
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js').then(function(registration) {
+        console.log('Service Worker registrado con éxito:', registration.scope);
+      }, function(error) {
+        console.log('Error al registrar el Service Worker:', error);
+      });
+    });
+  }
+</script>
+
+  </head>
+  <body>
+    <ul id="menu">
+      <li><a href="#" onclick="opcion1()">Opción 1<br>ROJO</a></li>
+      <li><a href="#" onclick="opcion2()">Opción 2<br>VERDE</a></li>
+      <li><a href="#" onclick="opcion3()">Opción 3<br>AZUL</a></li>
+    </ul>
+    <h1 id="titulo">¡ERROR 404!<br> Consulta a tu medico</h1>
+    <img src="/img/sadface.gif" alt="">
+    <div class="container">
+      <input type="checkbox" id="btn-mas" />
+      <div class="redes">
+        <a href="https://es-la.facebook.com" class="fab fa-facebook-f"></a>
+        <a href="https://www.instagram.com" class="fab fa-instagram"></a>
+        <a href="https://twitter.com" class="fab fa-twitter"></a>
+        <a href="https://www.pinterest.com.mx" class="fab fa-pinterest"></a>
+      </div>
+      <div class="btn-mas">
+        <label for="btn-mas" class="icon-mas2"><b>+</b></label>
+      </div>
+    </div>
+  </body>
+</html>
